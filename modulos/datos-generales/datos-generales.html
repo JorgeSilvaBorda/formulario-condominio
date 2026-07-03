@@ -1,0 +1,111 @@
+<script src="modulos/datos-generales/datos-generales.js"></script>
+<div class="modulo container-fluid" id="contenido-datos-generales">
+    <div class="row">
+        <div class="col-12">
+            <div class="title">
+                <h2 class="h2">Datos Generales</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="numero-depto">Nº Departamento</label>
+                <input class="form-control form-control-sm datos-generales" type="text" placeholder="Ej.: 103"
+                    id="numero-depto" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="numero-bodega">Nº Bodega</label>
+                <input class="form-control form-control-sm datos-generales" type="text" placeholder="Ej.: 45B"
+                    id="numero-bodega" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="numero-estacionamiento">Nº Estacionamiento</label>
+                <input class="form-control form-control-sm datos-generales" type="text" placeholder="Ej.: 103"
+                    id="numero-estacionamiento" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="celular-depto">Celular Departamento</label>
+                <input class="form-control form-control-sm datos-generales" type="tel"
+                    placeholder="Ej.: +56 9 4492 3948" id="celular-depto" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="corredora">Corredora</label>
+                <input class="form-control form-control-sm datos-generales" type="text"
+                    placeholder="Ej.: Ismael y Asociados" id="corredora" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="celular-corredora">Celular Corredora</label>
+                <input class="form-control form-control-sm datos-generales" type="tel"
+                    placeholder="Ej.: +56 9 4478 9585" id="celular-corredora" />
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="correo-corredora">Correo Corredora</label>
+                <input class="form-control form-control-sm datos-generales" type="email"
+                    placeholder="Ej.: maria@propiedades.cl" id="correo-corredora" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="fecha-registro">Fecha Registro</label>
+                <input class="form-control form-control-sm datos-generales" type="date" placeholder="Ej.: 31/08/2025"
+                    id="fecha-registro" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="autorizacion">Autorización</label>
+                <input class="form-control form-control-sm datos-generales" type="text"
+                    placeholder="Ej.: Gabriel González" id="autorizacion" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="contacto-emergencia">Contacto Emergencia</label>
+                <input class="form-control form-control-sm datos-generales" type="text" placeholder="Ej.: Juan Pérez"
+                    id="contacto-emergencia" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="telefono-emergencia">Teléfono Emergencia</label>
+                <input class="form-control form-control-sm datos-generales" type="tel"
+                    placeholder="Ej.: +56 9 4478 9585" id="telefono-emergencia" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-primary btn-sm" type="button" id="btn-guardar-datos-generales">Guardar</button>
+            <button class="btn btn-light btn-sm" type="button">Limpiar</button>
+        </div>
+        <div class="col-6"></div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <div id="mensaje-guardar-datos-generales" class="alert d-none" role="alert"></div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-end align-items-center gap-2 mb-2">
+                <button class="btn btn-outline-success btn-sm me-2" type="button" id="btn-exportar-datos-generales">
+                    <i class="bi bi-table"></i>Exportar
+                </button>
+                <label class="form-label mb-0" for="selector-filas-por-pagina">Registros por página</label>
+                <select class="form-select form-select-sm w-auto" id="selector-filas-por-pagina">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="50">50</option>
+                    <option value="custom">Personalizado</option>
+                </select>
+                <input class="form-control form-control-sm w-auto" type="number" min="1" step="1"
+                    id="input-filas-personalizadas" placeholder="Cantidad" />
+                <button class="btn btn-outline-secondary btn-sm" type="button"
+                    id="btn-aplicar-filas-personalizadas">Aplicar</button>
+            </div>
+            <div id="contenido-tabla-datos-generales"></div>
+        </div>
+    </div>
+</div>

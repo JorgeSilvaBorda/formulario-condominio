@@ -1,0 +1,37 @@
+{
+  "name": "formulario-condominio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Aplicación web/NW.js para formularios y registro de datos.",
+  "main": "index.html",
+  "engines": {
+    "node": ">=18"
+  },
+  "window": {
+    "width": 1024,
+    "min_width": 1024,
+    "height": 768,
+    "min_height": 768
+  },
+  "scripts": {
+    "start": "nw .",
+    "build": "node compilar.js",
+    "clean": "node -e \"const fs=require('fs'); ['dist','app.nw'].forEach((file)=>fs.rmSync(file,{recursive:true,force:true}));\""
+  },
+  "keywords": [
+    "nwjs",
+    "formulario",
+    "desktop"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "archiver": "^5.3.2",
+    "nw": "^0.112.0-sdk",
+    "nw-builder": "^4.17.13"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}

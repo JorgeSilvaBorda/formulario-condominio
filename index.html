@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario Condominio</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        ::placeholder {
+            color: var(--bs-secondary-color) !important;
+            opacity: 0.25 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbar-collapse-59038512-0f3f-420a-aba1-18c44759b504"
+                            aria-controls="navbar-collapse-59038512-0f3f-420a-aba1-18c44759b504" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbar-collapse-59038512-0f3f-420a-aba1-18c44759b504">
+                            <ul class="navbar-nav mb-2 mb-lg-0">
+                                <li class="nav-item" onclick="cargarModulo('datos-generales');">
+                                    <a class="nav-link" href="#" aria-current="page">Datos Generales</a>
+                                </li>
+                                <li class="nav-item" onclick="cargarModulo('propietario');">
+                                    <a class="nav-link" href="#">Propietario</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Arrendatario</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Residente</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Mascota</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Historial</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-12" id="contenido"></div>
+        </div>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/funciones.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
