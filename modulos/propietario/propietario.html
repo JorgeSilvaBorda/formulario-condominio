@@ -1,0 +1,105 @@
+<script src="modulos/propietario/propietario.js"></script>
+<div class="modulo container-fluid" id="contenido-propietario">
+	<div class="row">
+		<div class="col-12">
+			<div class="title">
+				<h2 class="h2">Propietario</h2>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<br />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-6">
+			<div class="mb-3">
+				<label class="form-label fw-bold" for="nombre-propietario">Nombre Propietario</label>
+				<input class="form-control form-control-sm propietario" type="text" placeholder="Ej.: Juan Perez"
+					id="nombre-propietario" />
+			</div>
+			<div class="mb-3">
+				<label class="form-label fw-bold" for="rut-propietario">RUT Propietario</label>
+				<input class="form-control form-control-sm propietario" type="text" placeholder="Ej.: 12.345.678-5"
+					id="rut-propietario" maxlength="12" />
+				<div id="mensaje-error-rut-propietario" class="form-text text-danger d-none">El RUT no es correcto.</div>
+			</div>
+			<div class="mb-3">
+				<label class="form-label fw-bold" for="correo-propietario">Correo Propietario</label>
+				<input class="form-control form-control-sm propietario" type="email"
+					placeholder="Ej.: propietario@correo.cl" id="correo-propietario" />
+			</div>
+			<div class="mb-3">
+				<label class="form-label fw-bold" for="telefono-propietario">Telefono Propietario</label>
+				<input class="form-control form-control-sm propietario" type="tel" placeholder="Ej.: +56 9 1234 5678"
+					id="telefono-propietario" />
+			</div>
+			<div class="mb-3">
+				<label class="form-label fw-bold" for="fecha-compra-propietario">Fecha Compra Propietario</label>
+				<input class="form-control form-control-sm propietario" type="date" id="fecha-compra-propietario" />
+			</div>
+		</div>
+		<div class="col-6">
+			<div class="mb-3">
+				<label class="form-label fw-bold" for="fecha-venta-propietario">Fecha Venta Propietario</label>
+				<input class="form-control form-control-sm propietario" type="date" id="fecha-venta-propietario" />
+			</div>
+			<div class="mb-3">
+				<label class="form-label fw-bold" for="marca-vehiculo">Marca Vehiculo</label>
+				<input class="form-control form-control-sm propietario" type="text" placeholder="Ej.: Toyota"
+					id="marca-vehiculo" />
+			</div>
+			<div class="mb-3">
+				<label class="form-label fw-bold" for="modelo-vehiculo-propietario">Modelo Vehiculo</label>
+				<input class="form-control form-control-sm propietario" type="text" placeholder="Ej.: Corolla"
+					id="modelo-vehiculo-propietario" />
+			</div>
+			<div class="mb-3">
+				<label class="form-label fw-bold" for="color-vehiculo">Color Vehiculo</label>
+				<input class="form-control form-control-sm propietario" type="text" placeholder="Ej.: Gris"
+					id="color-vehiculo" />
+			</div>
+			<div class="mb-3">
+				<label class="form-label fw-bold" for="patente-vehiculo">Patente Vehiculo</label>
+				<input class="form-control form-control-sm propietario" type="text" placeholder="Ej.: AB-CD-12"
+					id="patente-vehiculo" />
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-6">
+			<button class="btn btn-primary btn-sm" type="button" id="btn-guardar-propietario">Guardar</button>
+			<button class="btn btn-light btn-sm" type="button" id="btn-limpiar-propietario">Limpiar</button>
+		</div>
+		<div class="col-6"></div>
+	</div>
+	<div class="row mt-3">
+		<div class="col-12">
+			<div id="mensaje-guardar-propietario" class="alert d-none" role="alert"></div>
+		</div>
+	</div>
+	<div class="row mt-4">
+		<div class="col-12">
+			<div class="d-flex justify-content-end align-items-center gap-2 mb-2">
+				<button class="btn btn-outline-success btn-sm me-2" type="button" id="btn-exportar-propietario">
+					<i class="bi bi-table"></i>Exportar
+				</button>
+				<label class="form-label mb-0" for="selector-filas-propietario">Registros por pagina</label>
+				<select class="form-select form-select-sm w-auto" id="selector-filas-propietario">
+					<option value="5">5</option>
+					<option value="10" selected>10</option>
+					<option value="20">20</option>
+					<option value="30">30</option>
+					<option value="50">50</option>
+					<option value="custom">Personalizado</option>
+				</select>
+				<input class="form-control form-control-sm w-auto" type="number" min="1" step="1"
+					id="input-filas-personalizadas-propietario" placeholder="Cantidad" />
+				<button class="btn btn-outline-secondary btn-sm" type="button"
+					id="btn-aplicar-filas-personalizadas-propietario">Aplicar</button>
+			</div>
+			<div id="contenido-tabla-propietario"></div>
+		</div>
+	</div>
+</div>
