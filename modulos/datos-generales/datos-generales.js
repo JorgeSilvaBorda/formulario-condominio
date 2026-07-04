@@ -153,16 +153,33 @@
         });
     }
 
-    function mostrarMensaje(mensaje, tipo) {
+    function mostrarMensaje(mensaje, tipo, tiempoDesaparicion) {
         const contenedor = $('#mensaje-guardar-datos-generales');
         if (!contenedor.length) {
             return;
+        }
+
+        // Limpiar timeout anterior si existe
+        if (contenedor.data('timeoutId')) {
+            clearTimeout(contenedor.data('timeoutId'));
         }
 
         contenedor
             .removeClass('d-none alert-success alert-danger')
             .addClass(`alert alert-${tipo}`)
             .html(mensaje);
+
+        // Auto-ocultar después del tiempo especificado (por defecto 5 segundos para success)
+        const tiempo = tiempoDesaparicion !== false 
+            ? (tiempoDesaparicion || (tipo === 'success' ? 5000 : false))
+            : false;
+
+        if (tiempo) {
+            const timeoutId = setTimeout(() => {
+                contenedor.addClass('d-none').removeClass('alert-success alert-danger');
+            }, tiempo);
+            contenedor.data('timeoutId', timeoutId);
+        }
     }
 
     function escapeHtml(texto) {
